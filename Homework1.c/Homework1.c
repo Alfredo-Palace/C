@@ -6,7 +6,7 @@ int main(){
 	//the 1st while is to start the cycle
         while((c = getchar()) != EOF){
 //this part eliminate and classificate strongs and strings 
-//(here I recieved important help from my partner Angel David Soria Gonzalez because her code permits me watch the problem in other view, so thnx a lot :) )*/
+//(here I recieved important help from my partner Angel Soria because her code and explanation permits me watch the problem in other view, so thnx a lot :) )*/
 
         if(c == '<')
 	{
