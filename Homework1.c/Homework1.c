@@ -31,10 +31,13 @@ int ignore=0;
                  putchar (c);
                  i=0;
              }
-        putchar(c);  //answer of getchar, insert each character
+        putchar(c);  
 
             }
         }
 
 }   
+//this program could not have been developed without the help of Abner Z., Julio B and Cracklitos
+
+
     
