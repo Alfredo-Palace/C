@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main(){
-    int c, i = 0;
+    int c; 
+    int i = 0;
     char strong[13]={"strong/strong"}; //this char keep the characters (13 total characters) to identificate if it is a strong
     char scrip[13]={"script/script"};  //this char keep the characters (13 total characters) to identificate if it is a script
 	//the 1st while is to start the cycle
