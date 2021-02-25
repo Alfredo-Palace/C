@@ -4,40 +4,34 @@ int main(){
     char strong[13]={"strong/strong"};
     char scrip[13]={"script/script"};
 	
-        while((c = getchar()) != EOF)
-    {
-        if(c == '<')
-        {
+        while((c = getchar()) != EOF){
+		//
+        if(c == '<'){
             while((c = getchar()) == strong[i]){
-                i++;
-            }
-            if(c == scrip[1]){ //c
+                i++; }
+            if(c == scrip[1]){ //this part read letter c
                 c = getchar();
-                if(c == scrip[2]){ //r
+                if(c == scrip[2]){ //this part read letter r
                     c = getchar();
-                    if (c == scrip[3]){ //i
+                    if (c == scrip[3]){ //this part read letter i
                         while ((c = getchar()) != '>'){
-                            NULL;
-                        }
+                            NULL;}
                         while((c = getchar()) != '>'){
-                            NULL;
-                        }
+                            NULL;}
                     }
                 }
             }
+		//this part permits write the text that are not strongs, strings or "</>"
             if(i == 13){
-                i =0;
-            }
+                i =0;}
              while(c != EOF && c != '>'){
-                c = getchar();
-            }
+                c = getchar();}
         }
+		//spaces
         else if (i == 6 && i < 13){
                 if(c == ' '){
-                    printf("_");
-                }
-            putchar(c);
-           }
+                    printf("_");}
+            putchar(c);}
             if ((i != 6 && c != '<' && c != '>') || c == '\n'){
             putchar(c);
             i = 0;
