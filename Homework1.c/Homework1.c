@@ -10,7 +10,7 @@ int main(){
 
         if(c == '<'){
             while((c = getchar()) == strong[i]){
-                i++; }
+                i = i+1; }
             if(c == scrip[1]){ //this part read letter c
                 c = getchar();
                 if(c == scrip[2]){ //this part read letter r
