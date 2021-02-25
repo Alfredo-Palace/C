@@ -5,7 +5,9 @@ int main(){
     char scrip[13]={"script/script"};
 	
         while((c = getchar()) != EOF){
-		//
+*//this part eliminate and classificate strongs and strings 
+//(here I recieved important help from my partner Angel David Soria Gonzalez because her code permits me watch the problem in other view, so thnx a lot :) )*/
+
         if(c == '<'){
             while((c = getchar()) == strong[i]){
                 i++; }
