@@ -1,4 +1,4 @@
-
+/*todo este programa fue desarrollado en el compilador online GDB asi que te recomiendo utilizarlo en ese medio por si gustas probarlo*/
 #include "header.h"
 
 /* reverse Polish Calculator */
@@ -161,3 +161,4 @@ void ungetch(int c)		/* push character back on input */
 		buf[bufp++] = c;
 }
 
+/*Quiero agradecer por la ayuda para realizar este codigo a mis compañeros Abner, Cracklitos y al canal de youtube zers0325*/
