@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>		/* for atof() */
 #define MAXOP	100		/* max size of operand or operator */
-#define NUMERO	'0'		/* signal that a number was found */
-#define SIGNO	'1' /* signal that an operator was found */
-#define OPERADORMATH	'2'	/* signal that a math operator was found */
-#define VARIABLE		'3'	/* signal that a variable was found */
+#define NUMERO	'0'		/* señal de que se encontro un numero*/
+#define SIGNO	'1' /* señal de que se encontro un signo */
+#define OPERADORMATH	'2'	/* señal de que se encontro un operador matematico */
+#define VARIABLE		'3'	/* señal de que se encontro una variable */
 
 int getop(char []);
 void push(double);
