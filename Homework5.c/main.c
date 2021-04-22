@@ -1,5 +1,8 @@
-#include "header.h"
+//Este programa fue hecho en su totalidad en el compilador en linea GDB asi que te recomiendo probarlo ahi. 
+// Para testearlo tienes que colocar todo el codigo del archivo main.c en la pestaña principal para luego abrir una nueva pestaña o documento y colocarle el nombre de "header.h", y colocar todo el codigo del archivo header.h del otro archivo de la misma carpeta.
+// Sino sigues estas indicaciones probablemente el programa no se compilara. Cualquier duda mandame mensaje en discordsito :)
 
+#include "header.h"
 //-----------------TEORIA DEL JUEGO------------------------//
 // Indica los contadores correctos a las demás celdas
 int ContadoresCeldas(int fila, int columna, char cuadricula[NFILAS][NCOLUMNAS]) {
