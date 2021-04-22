@@ -27,7 +27,7 @@
  /*
   - No puede haber más filas que letras del abecedario, porque solo se imprime hasta la Z.
   - No puede haber más de 10 columnas porque ya no se imprimiría bien por el acomodo de los espacios.
-  - Por el bien del programa te recomiendo como maximo utilizar una cuadricula de 9x9.
+  - Por el bien del programa te recomiendo como maximo utilizar una cuadricula de 10x10.
   - Al colocar las minas se puede colocar una mina sobre otra mina asi que a veces se imprimen menos.
 */
 
