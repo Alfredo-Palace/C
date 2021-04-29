@@ -202,3 +202,4 @@ int main()
 }
 
 //Quiero agradecer a mi compañero Abner Z. por la ayuda para realizar el codigo, Abner si ves esto te tkm <3
+//Tambien se utilizaron los recursos del libro de programacion en c de Kernighan, la c-refcard y las clases de Satuelisa :)
