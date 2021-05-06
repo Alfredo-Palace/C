@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 
-#define MAX_NAME_CHARS 20
 int calcHorasLaboradas(int pin);
 int crearRegistro(void);
 int checkPines(int pin);
