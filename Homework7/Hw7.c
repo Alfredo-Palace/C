@@ -1,6 +1,6 @@
 //Instrucciones//
 //solo copia el codigo con el nombre Hw7.c y pega en tu compilador: main.c, crea otro documento y coloca el nombre: encabezado.h y pega el codigo que aparece en mi github con ese nombre
-//Crea tambien 3 archivos más: system.txt, times.txt & log.txt, pero no agregues nada de texto simplemente crealos, el programa por su cuenta lo hara
+//Crea tambien 3 archivos mÃ¡s: system.txt, times.txt & log.txt, pero no agregues nada de texto simplemente crealos, el programa por su cuenta lo hara
 
 
 //RECOMENDACIONES ANTES DE COMPILAR//
@@ -9,7 +9,7 @@
 // -> Para ambos tipos de compiladores el programa te abrira los documentos .txt necesarios para que el codigo funcione
 //    si esto no pasa automaticamente te recomiendo crear los archivos por tu cuenta.
 // -> En online GDB no se pq en mi caso es mas propenso a tener bugs el programa asi que si lo quieres correr ahi te recomiendo que cada que realices un movimiento cierres el programa (todos los datos ingresados se se guardan)
-// -> Si tienes algun inconveniente o ves algo extraño te recomiendo mandarme un mensaje en discord para que te diga que ocurre
+// -> Si tienes algun inconveniente o ves algo extraÃ±o te recomiendo mandarme un mensaje en discord para que te diga que ocurre
 // -> Antes de que califiques el codigo te recomiendo que cheques bien lo que se escribe y que hayas seguido las indicaciones
 // Yo he compilado el codigo en Online GDB, Dev-C y CodeBlocks y en todos jala, asi que si ocurre algo me avisas :)
 
@@ -171,7 +171,7 @@ int main()
     printf("//INTRUCCIONES DE USO//\n");
     printf("1.-Corre el programa\n2.-Inicia como administrador (pin: '0')\n3.-Agrega un trabajador\n4.-Cierra y abre el programa pero ahora inicia sesion en modo trabajador con el pin que creaste.\n");
     printf("5.-registra tu entrada\n6.-Cierra y vuelve a abrir el programa (con el pin del trajador del paso anterior) y registra tu salida\n7.-vuelve a ejecutar el programa en modo administrador (pin: '0')\n");
-	printf("\nListooo ahora verifica por ejemplo la asistencia de algun trabajador, las horas trabajadas, etc.\n\n->PD.Sino añades ningun trabajador antes es probable que el codigo no te deje trabajar\n");
+	printf("\nListooo ahora verifica por ejemplo la asistencia de algun trabajador, las horas trabajadas, etc.\n\n->PD.Sino aÃ±ades ningun trabajador antes es probable que el codigo no te deje trabajar\n");
 	printf ("->Te recomiendo siempre despues de realizar un movimiento cerrar el codigo y volver a abrirlo, todo se guarda asi que ntp\n");
 	printf("\n**ADVERTENCIA**: Si obervas algun tipo de bug o algo raro por parte del programa simplemente cierralo, toda le memoria y los usuarios se guardaran (a veces como que la maquina se sobre llena de memoria), gracias por la compresnion :)\n");
 	printf("-------------------------------------------------------------------------------------------------\n\n");
@@ -316,4 +316,4 @@ int main()
 }
 
 
-//Quiero agradecer a mi compañero Abner Z. por la ayuda brindada y al libro de Kerninghan, la C-refcard y las clases de Satuelisa :)
+//Quiero agradecer a mi compaÃ±ero Abner Z. por la ayuda brindada y al libro de Kerninghan, la C-refcard y las clases de Satuelisa :)
