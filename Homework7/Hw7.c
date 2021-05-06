@@ -1,6 +1,6 @@
 //Instrucciones//
 //solo copia el codigo con el nombre Hw7.c y pega en tu compilador: main.c, crea otro documento y coloca el nombre: encabezado.h y pega el codigo que aparece en mi github con ese nombre
-//Crea tambien 3 archivos más: system.txt, times.txt & log.txt, pero no agregues nada de texto simplemente crealos, el programa por su cuenta lo hara
+//Crea tambien 3 archivos más: system.txt, times.txt & log.txt, pero no agregues nada de texto simplemente crealos, el programa por su cuenta lo hara 
 
 
 //RECOMENDACIONES ANTES DE COMPILAR//
@@ -14,11 +14,12 @@
 // Yo he compilado el codigo en Online GDB, Dev-C y CodeBlocks y en todos jala, asi que si ocurre algo me avisas :)
 
 #include "encabezado.h"
-/*Inician Funciones/Subrutinas*/
-int Registro(void)
+
+
+/*Inician Funciones*/
+int crearRegistro(void)
 {
-	int nuevoPin = 1, pin, flag = 0;
-	int checarPins(int pin);
+    int newpin = 1, pin, flag = 0;
     char horae[30], horas[30], dias[40];
     FILE *fichero;
 
@@ -32,39 +33,39 @@ int Registro(void)
     {
         while (1)
         {
-           if (checarPins(nuevoPin))
-           {
-               nuevoPin++;
-           }else {
-               break;
-           }
+            if (checkPines(newpin))
+            {
+                newpin++;
+            }
+            else
+            {
+                break;
+            }
         }
 
         fichero = fopen("system.txt", "a");
-        printf("El nuevo pin generado automaticamente es: '%d'\n", nuevoPin);
+        printf("El nuevo pin generado automaticamente es : %d\n", newpin);
         printf("Introduce los dias que trabajara, sin espacios (ejemplos: LunesMartes   o   MiercolesJuevesViernes\n");
         fflush(stdin);
-        scanf("%s", &dias);
+        scanf("%s", dias);
         printf("Introduce la hora de entrada del trabajador (ejemplos: 10:30 , 23:00 ,etc)\n");
         fflush(stdin);
-        scanf("%s", &horae);
+        scanf("%s", horae);
         printf("Introduce la hora de salida del trabajador (ejemplos: 10:30 , 23:00 ,etc)\n");
         fflush(stdin);
-        scanf("%s", &horas);
-        fprintf(fichero, "c%d e%s s%s d%s\n", nuevoPin, horae, horas, dias);
+        scanf("%s", horas);
+        fprintf(fichero, "c%d e%s s%s d%s\n", newpin, horae, horas, dias);
         printf("Se ha registrado con exito al trabajador");
         fflush(fichero);
         fclose(fichero);
         fichero = fopen("times.txt", "a");
-        fprintf(fichero, "%d 0 \n", nuevoPin);
+        fprintf(fichero, "%d 0 \n", newpin);
         fflush(fichero);
         fclose(fichero);
         printf("\n");
     }
 }
-
-
-int checarPins(int pin)
+int checkPines(int pin)
 {
     int pines[9], j = 0;
     int c;
@@ -97,8 +98,6 @@ int checarPins(int pin)
     fflush(fichero);
     fclose(fichero);
 }
-
-
 int verAsistencias(int pin)
 {
     int c, asistencias = 0;
@@ -117,9 +116,8 @@ int verAsistencias(int pin)
     }
     fflush(fichero);
     fclose(fichero);
-    printf("\n El usuario '%d' tiene: %d asistencias\n", pin, asistencias);
+    printf("\nEl usuario %d tiene : %d asistencias\n", pin, asistencias);
 }
-
 
 int verTiempoTrabajado(int pin)
 {
@@ -146,23 +144,20 @@ int verTiempoTrabajado(int pin)
     fclose(fichero);
     return tiempo;
 }
-
-
 int calcHorasLaboradas(int pin)
 {
-    int horas,c,pinarch ;
-    FILE * fichero;
+    int horas, c, pinarch;
+    FILE *fichero;
     fichero = fopen("times.txt", "r");
     while (1)
     {
         fscanf(fichero, "%d %d", &pinarch, &horas);
-        if(pinarch==pin)
+        if (pinarch == pin)
         {
             return horas;
             break;
         }
-
-        }
+    }
 }
 
 /*Inicia la funcion principal*/
@@ -171,18 +166,15 @@ int main()
     printf("//INTRUCCIONES DE USO//\n");
     printf("1.-Corre el programa\n2.-Inicia como administrador (pin: '0')\n3.-Agrega un trabajador\n4.-Cierra y abre el programa pero ahora inicia sesion en modo trabajador con el pin que creaste.\n");
     printf("5.-registra tu entrada\n6.-Cierra y vuelve a abrir el programa (con el pin del trajador del paso anterior) y registra tu salida\n7.-vuelve a ejecutar el programa en modo administrador (pin: '0')\n");
-	printf("\nListooo ahora verifica por ejemplo la asistencia de algun trabajador, las horas trabajadas, etc.\n\n->PD.Sino añades ningun trabajador antes es probable que el codigo no te deje trabajar\n");
-	printf ("->Te recomiendo siempre despues de realizar un movimiento cerrar el codigo y volver a abrirlo, todo se guarda asi que ntp\n");
+	printf("\nListooo ahora verifica por ejemplo la asistencia de algun trabajador, las horas trabajadas, etc.\nPD.Sino añades ningun trabajador antes es probable que el codigo no te deje trabajar\n");
 	printf("\n**ADVERTENCIA**: Si obervas algun tipo de bug o algo raro por parte del programa simplemente cierralo, toda le memoria y los usuarios se guardaran (a veces como que la maquina se sobre llena de memoria), gracias por la compresnion :)\n");
 	printf("-------------------------------------------------------------------------------------------------\n\n");
-	FILE *flujo;
-    int temppin, temptime, flag = 1;
+    FILE *flujo;
+    int temppin, temptime, flag = 1, pin, option, bucle = 1, user;
     time_t tiempo = time(0);
     struct tm *tlocal = localtime(&tiempo);
-    char output[128];
+    char output[128], buffer[32];
     strftime(output, 128, "%d/%m/%y", tlocal);
-    int pin, option, user;
-    char buffer[32];
     struct tm *ts;
     size_t last;
     time_t timestamp = time(NULL);
@@ -202,19 +194,20 @@ int main()
         option = 0;
         printf("Bienvenido, intruduce tu pin: \n");
         scanf("%d", &pin);
-        if (checarPins(pin) != 1) //verificar si ese pin existe en el sistema
+        if (checkPines(pin) != 1) //verificar si ese pin existe en el sistema
         {
             printf("ese pin no existe, checa el registro de pines validos en system.tx o crea a ese usuario como administrador\n");
             printf("Hasta pronto!\n");
             getchar();
+            getchar();
             exit(1);
         }
         printf("*MENU WORKER*\nTrabajador #%d, Bienvenido al sistema :)\nQue deseas hacer? (introduce el numero con la opcion que requieras) \n", pin);
-        printf("1.- Voy a entrar a trabajar\n2.- Voy a salir del trabajo\n");
+        printf("-Presiona 1 si vas a entrar al trabajo\n-Presiona 2 si vas a salir del trabajo\n");
         scanf("%d", &option);
         switch (option)
         {
-        case 1: //entrada al trabajo
+        case 1: //entrada al jale
             flujo = fopen("log.txt", "a");
             printf("Se ha registrado tu entrada pin:%d hoy:%s %s\n", pin, output, buffer);
             fprintf(flujo, "e%d %lu %s %s\n", pin, (unsigned long)time(NULL), output, buffer);
@@ -222,7 +215,7 @@ int main()
             fflush(flujo);
             fclose(flujo);
             break;
-        case 2: //salida del trabajo
+        case 2: //salida del jale
             flujo = fopen("times.txt", "r+");
             while (flag != 0)
             {
@@ -238,20 +231,15 @@ int main()
                 }
             }
             flujo = fopen("log.txt", "a");
-            printf("Se ha registrado tu salida pin: %d hoy:%s %s\n", pin, output, buffer);
+            printf("Se ha registrado tu salida pin:%d hoy:%s %s\n", pin, output, buffer);
             fprintf(flujo, "s%d %lu %s %s %d\n", pin, (unsigned long)time(NULL), output, buffer, verTiempoTrabajado(pin));
-            printf("\n Has trabajado por %d segundos \n", verTiempoTrabajado(pin));
-            printf("Bien hecho, ahora descansa");
+            printf("\n Has trabajado por %d segundos \nBien hecho, ahora descansa\n", verTiempoTrabajado(pin));
             fflush(flujo);
-            fclose(flujo);
-
-            /* Cerramos "fichero1.txt". */
             fclose(flujo);
             fprintf(flujo, "%d %d\n", pin, verTiempoTrabajado(pin));
             break;
         }
         getchar();
-        exit(1);
     }
     else if (option == 0) //opciones de admin
     {
@@ -262,46 +250,58 @@ int main()
         {
             printf("Tu no eres admin >:| Expulsado\n");
             getchar();
+            getchar();
             exit(1);
         }
         else
         {
-            while (1)
+            while (bucle == 1)
             {
                 option = 0;
                 printf("\n*MENU ADMIN*\nQue deseas hacer? (introduce el numero con la opcion que requieras) \n");
-                printf("1.- Quiero ver las asistencias de un trabajador\n2.- Quiero agregar un nuevo trabajador\n3.- Quiero ver las horas trabajadas de un usuario\n");
+                printf("1.- Quiero ver las asistencias de un trabajador\n2.- Quiero agregar un nuevo trabajador\n3.- Quiero ver las horas trabajadas de un usuario\n4.- Quiero salir del codigo\n");
                 fflush(stdin);
                 scanf("%d", &option);
                 // acciones
                 switch (option)
                 {
-                case 1:
+                case 1: //Reporte de asistencias
                     printf("Escribe el pin del usuario para ver sus asistencias(asegurate de que sea valido): \n");
                     fflush(stdin);
                     scanf("%d", &pin);
+                    if (checkPines(pin) != 1) //verificar si ese pin existe en el sistema
+                    {
+                        printf("Ese pin no existe, checa el registro de pines validos en system.tx o crea a ese usuario \n");
+                        printf("Hasta pronto!\n");
+                        getchar();
+                        getchar();
+                        exit(1);
+                    }
                     verAsistencias(pin);
                     break;
-                case 2:
-                    Registro();
+                case 2://creacion de usuario
+                    crearRegistro();
                     break;
-                case 3:
-                    printf("Escribe el pin del usuario para ver sus asistencias(asegurate de que sea valido): \n");
+                case 3://reporte de  horas
+                    printf("Escribe el pin del usuario para ver sus horas trabajadas(asegurate de que sea valido): \n");
                     fflush(stdin);
                     scanf("%d", &pin);
-                    printf("El usuario con el pin: '%d',  ha trabajado por %d segundos \n", pin ,calcHorasLaboradas(pin));
-                    break;
-                }
-
-                printf("Si deseas hacer otro movimiento ingresa cualquier caracter, si deseas salir introduce '1'\n");
-                fflush(stdin);
-                scanf("%d", &option);
-                if (option == 1)
-                {
-                    printf("Hasta la proximaaaa\n"),
+                    if (checkPines(pin) != 1) //verificar si ese pin existe en el sistema
+                    {
+                        printf("Ese pin no existe, checa el registro de pines validos en system.tx o crea a ese usuario \n");
+                        printf("Lo siento pero nos tenemos que despedir, hasta pronto!\n");
                         getchar();
-                    exit(1);
+                        getchar();
+                        exit(1);
+                    }
+                    printf("El usuario con el pin: '%d',  ha trabajado por %d segundos \n", pin, calcHorasLaboradas(pin));
+                    break;
+                    case 4:
+                        exit(1);
+                        break;
                 }
+                
+                
             }
         }
     }
@@ -309,11 +309,9 @@ int main()
     {
         printf("Lamentamos no poder atenderte pero no escribiste una opcion valida. Presione enter para salir ...");
         getchar();
+        getchar();
         exit(1);
     }
     getchar();
-    exit(1);
 }
-
-
 //Quiero agradecer a mi compañero Abner Z. por la ayuda brindada y al libro de Kerninghan, la C-refcard y las clases de Satuelisa :)
