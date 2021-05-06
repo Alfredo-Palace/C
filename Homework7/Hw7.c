@@ -210,11 +210,11 @@ int main()
             exit(1);
         }
         printf("*MENU WORKER*\nTrabajador #%d, Bienvenido al sistema :)\nQue deseas hacer? (introduce el numero con la opcion que requieras) \n", pin);
-        printf("1.- Voy a entrar al jale\n2.- Voy a salir del jale\n");
+        printf("1.- Voy a entrar a trabajar\n2.- Voy a salir del trabajo\n");
         scanf("%d", &option);
         switch (option)
         {
-        case 1: //entrada al jale
+        case 1: //entrada al trabajo
             flujo = fopen("log.txt", "a");
             printf("Se ha registrado tu entrada pin:%d hoy:%s %s\n", pin, output, buffer);
             fprintf(flujo, "e%d %lu %s %s\n", pin, (unsigned long)time(NULL), output, buffer);
@@ -222,7 +222,7 @@ int main()
             fflush(flujo);
             fclose(flujo);
             break;
-        case 2: //salida del sale
+        case 2: //salida del trabajo
             flujo = fopen("times.txt", "r+");
             while (flag != 0)
             {
