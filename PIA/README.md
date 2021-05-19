@@ -44,12 +44,12 @@ If you don't want to compile but you want to see that the code works, watch the 
 
 C Reference Card (ANSI) and The book: C Programming Language by Kerninghan and Ritchie
 
-## Author(s)😁
+## Author(s):shipit:
 
 Alfredo Palacios Trejo-2077513-IMTC
 
 ## Course ⚙️
 Programacion Estructurada
 
-## License
+## License 🐼:
 For Academic Purposes Only
