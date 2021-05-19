@@ -1,7 +1,7 @@
 # PI (INTEGRATING PROJECT) 👨‍🏫
 # "CURP CALCULATOR" 🧮
 ## Synopsis :mexico:
-In Mexico, the Unique Population Registration Code (CURP) is a unique 18-character alphanumeric identity code used to officially identify both Mexican residents and citizens throughout the country.
+In Mexico, the Unique Population Registration Code (CURP) is a unique 18-character alphanumeric identity code used to officially identify Mexican residents and citizens throughout the country.
 
 The reasons for the development of this project are simply because it caught my attention that this code is extremely important in procedures here in Mexico and I am amazed at the way the government labels us by means of codes. Also among the reasons for the development are to use the greatest amount of knowledge learned throughout the learning unit of the structured programming subject
 
