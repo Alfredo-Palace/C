@@ -1,4 +1,4 @@
-#include "encabezado.h"
+#include "top.h"
 
 int saca (int max, char *buf){
 	char *c, i;
