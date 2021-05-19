@@ -9,12 +9,12 @@ The reasons for the development of this project are simply because it caught my 
 This program is designed to give you your CURP in a simulated way, The program mostly uses arrays, pointers, memory access, database, and strings.
 
 ## Build instructions 📓
-- Just copy the code of the code in the main.c file in your trusted compiler and give it the same name as the file
-- Then create another document and name header.h and paste the code that appears in this folder with the same name
+- Just copy the code of the file CurpCalculator.c in your trusted compiler and give it the same name as the file.
+- Then create another document and name top.h and paste the code that appears in this folder with the same name
 - Now just compile or run the code
 ## To acces to the files
-- [curp.c](https://github.com/Alfredo-Palace/C/blob/main/PIA/curp.c).
-- [encabezado.h](https://github.com/Alfredo-Palace/C/blob/main/PIA/encabezado(1).h).
+- [CurpCalculator.c](https://github.com/Alfredo-Palace/C/blob/main/PIA/curp.c).
+- [top.h](https://github.com/Alfredo-Palace/C/blob/main/PIA/encabezado(1).h).
 ## To understand how can you get a CURP manually 
 see this link: [CURP presentation](https://github.com/Alfredo-Palace/C/blob/main/PIA/Presentacion%20CURP.pdf).
 
