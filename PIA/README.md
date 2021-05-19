@@ -12,7 +12,9 @@ This program is designed to give you your CURP in a simulated way, The program m
 - Just copy the code of the code in the main.c file in your trusted compiler and give it the same name as the file
 - Then create another document and name header.h and paste the code that appears in this folder with the same name
 - Now just compile or run the code
-
+## To acces to the files
+[curp.c](https://github.com/Alfredo-Palace/C/blob/main/PIA/curp.c).
+[encabezado.h](https://github.com/Alfredo-Palace/C/blob/main/PIA/encabezado(1).h).
 ## To understand how can you get a CURP manually 
 see this link: [CURP presentation](https://github.com/Alfredo-Palace/C/blob/main/PIA/Presentacion%20CURP.pdf).
 
@@ -36,6 +38,8 @@ Memories and a robust interface were also added so that the program works in a g
 5. At the end the program assigns you a random Homoclave and with it your CURP
 
 ** WARNING ** You must fill in the information as requested in the program because if you put something wrong it is possible that the program will tell you the error or expel you from the code
+## To test the code 
+[Click here for the CURP Calculator](https://www.onlinegdb.com/edit/BkxgdsALud).
 ## Video 📼
 If you don't want to compile but you want to see that the code works, watch the following: 
 [CURP IN C PROGRAM](https://www.youtube.com/).  
