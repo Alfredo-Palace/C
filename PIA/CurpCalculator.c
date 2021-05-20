@@ -21,7 +21,7 @@ int saca (int max, char *buf){
 
 //-------------------Apellidos y nombres---------------- 
 char primeraVocal (char *buf){
-	while ( *buf != '\0' ){
+	while (*buf != '\0'){
 		switch (toupper(*buf)){
 			case 'A':
 			case 'E':
@@ -38,7 +38,7 @@ char primeraVocal (char *buf){
 }
 
 char primeraConsonante (char *buf) {
-	while ( *buf != '\0' ){
+	while (*buf != '\0'){
 		switch ( toupper(*buf) ){
 			case 'A':
 			case 'E':
@@ -62,7 +62,6 @@ int Primer_QuintoTotem (char *buf, char *curp){
 	if (strlen(buf) < 2){
 		return 1;
 	}
-
 	while (*(copia++) != '\0'){
 	    char caracter = toupper(*copia);
 		if ( !(caracter == ' ' || caracter == '\0' || isalpha (caracter))){ //Si el caracter no es un espacio, un salto de linea o una letra arrojar advertencia
@@ -71,7 +70,6 @@ int Primer_QuintoTotem (char *buf, char *curp){
 			return 1;
 		}
   	  }
-
 
 	// Apellido paterno.
 	if (token = strtok(buf, delimiter)){
