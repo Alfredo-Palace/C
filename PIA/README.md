@@ -1,4 +1,4 @@
-# PI (INTEGRATING PROJECT) 👨‍🏫
+# PI (INTEGRATING PROJECT) 🖥️
 # "CURP CALCULATOR" 🧮
 ## Synopsis :mexico:
 In Mexico, the Unique Population Registration Code (CURP) is a unique 18-character alphanumeric identity code used to officially identify Mexican residents and citizens throughout the country.
@@ -12,10 +12,10 @@ This program is designed to give you your CURP in a simulated way, The program m
 - Just copy the code of the file CurpCalculator.c in your trusted compiler and give it the same name as the file.
 - Then create another document and name top.h and paste the code that appears in this folder with the same name
 - Now just compile or run the code
-## To acces to the files
+## To acces to the files 🖱️
 - [CurpCalculator.c](https://github.com/Alfredo-Palace/C/blob/main/PIA/CurpCalculator.c).
 - [top.h](https://github.com/Alfredo-Palace/C/blob/main/PIA/top.h).
-## To understand how can you get a CURP manually 
+## To understand how can you get a CURP manually 👨‍🏫
 see this link: [CURP presentation](https://github.com/Alfredo-Palace/C/blob/main/PIA/Presentacion%20CURP.pdf).
 
 ## General program logistics 🎂
@@ -38,7 +38,7 @@ Memories and a robust interface were also added so that the program works in a g
 5. At the end the program assigns you a random Homoclave and with it your CURP
 
 ** WARNING ** You must fill in the information as requested in the program because if you put something wrong it is possible that the program will tell you the error or expel you from the code
-## To test the code 
+## To test the code 👇
 [Click here for the CURP Calculator](https://www.onlinegdb.com/edit/BkxgdsALud).
 ## Video 📼
 If you don't want to compile but you want to see that the code works, watch the following: 
@@ -55,5 +55,5 @@ Alfredo Palacios Trejo-2077513-IMTC
 ## Course ⚙️
 Programacion Estructurada
 
-## License 🐼:
+## License 🐼
 For Academic Purposes Only
