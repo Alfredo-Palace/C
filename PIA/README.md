@@ -63,4 +63,4 @@ For Academic Purposes Only
 - 3: código 2 (Creo que hay cosas que se pueden hacer de manera mas sencilla)
 - 4: almacenaje 2(no utilizo una base de datos como un archivo .txt)
 - 5: documentación 3 (siento que quedo bien el video, el README.md y el codigo esta bien dividio en archivo .c y archivo.h)
-###Total de puntos: 12
+### Total de puntos: 12
