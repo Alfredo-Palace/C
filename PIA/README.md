@@ -58,9 +58,9 @@ Programacion Estructurada
 ## License 🐼
 For Academic Purposes Only
 ## Autoevaluation
-1: complejidad 2 (al inicio puede parecer algo sencillo pero con toda la interfaz robusta, el alamacenamiento de memoria y todas las subrutinas creo que tiene cierta complejidad)
-2: funcionalidad 3 (Si funciona incluso si pones casos mal)
-3: código 2 (Creo que hay cosas que se pueden hacer de manera mas sencilla)
-4: almacenaje 2(no utilizo una base de datos como un archivo .txt)
-5: documentación 3 (siento que quedo bien el video, el README.md y el codigo esta bien dividio en archivo .c y archivo.h)
+- 1: complejidad 2 (al inicio puede parecer algo sencillo pero con toda la interfaz robusta, el alamacenamiento de memoria y todas las subrutinas creo que tiene cierta complejidad)
+- 2: funcionalidad 3 (Si funciona incluso si pones casos mal)
+- 3: código 2 (Creo que hay cosas que se pueden hacer de manera mas sencilla)
+- 4: almacenaje 2(no utilizo una base de datos como un archivo .txt)
+- 5: documentación 3 (siento que quedo bien el video, el README.md y el codigo esta bien dividio en archivo .c y archivo.h)
 Total de puntos: 12
