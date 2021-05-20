@@ -16,11 +16,9 @@ int saca (int max, char *buf){
 		    printf ("\n**ADVERTENCIA**\n");
 			printf("Entrada demasiado larga, acotado a \"%s\"", buf);
 		}
-
 		return strlen(buf);
 	} else return 0;
 }
-
 
 //-------------------Apellidos y nombres---------------- 
 char primeraVocal (char *buf){
@@ -37,7 +35,6 @@ char primeraVocal (char *buf){
 		}
 		buf++;
 	}
-
 	return '\0';
 }
 
@@ -60,23 +57,22 @@ char primeraConsonante (char *buf) {
 
 int Primer_QuintoTotem (char *buf, char *curp){
 	const char delimiter[2] = " ";
-	char *token,*cpy;
-	size_t i;
-	char caracter = toupper(*cpy);
+	char *token,*copia;
+	copia = buf;
 	
 	if (strlen(buf) < 2){
 		return 1;
 	}
 
-	else if (cpy = buf){
-	while (*(cpy++) != '\0'){
-		if ( !(caracter == ' ' || caracter == '\0' || (caracter >= 'A' && caracter <= 'Z')) ){ //Si el caracter no es un espacio, un salto de linea o una letra arrojar advertencia
+	while (*(copia++) != '\0'){
+	    char caracter = toupper(*copia);
+		if ( !(caracter == ' ' || caracter == '\0' || isalpha (caracter))){ //Si el caracter no es un espacio, un salto de linea o una letra arrojar advertencia
 			printf ("\n**ADVERTENCIA**\n");
 			printf ("El nombre debe ser solamente texto sin acentos\n");
 			return 1;
 		}
   	  }
-	}
+
 
 	// Apellido paterno.
 	if (token = strtok(buf, delimiter)){
@@ -88,7 +84,6 @@ int Primer_QuintoTotem (char *buf, char *curp){
 		printf ("Debe ingresar un nombre con apellido paterno\n");
 		return 1;
 	}
-	
 	 // Apellido materno.
 	if (token = strtok(NULL, delimiter)){
 		curp[2] = toupper (token[0]);
@@ -98,20 +93,18 @@ int Primer_QuintoTotem (char *buf, char *curp){
 		printf ("Debe ingresar un nombre con apellido materno\n");
 		return 1;
 	}
-	
-	 // Primer Nombre.
+	 // Nombre.
 	if (token = strtok(NULL, delimiter)){
 		curp[3] = toupper (token[0]);
 		curp[15] = toupper (primeraConsonante(token+1));
 	}else{
+	    
 	    printf ("\n**ADVERTENCIA**\n");
 		printf ("Debe ingresar su nombre(s)\n");
 		return 1;
 	}	
 	return 0;
 }
-
-
 
 //----------Fecha de nacimiento-----------------
 int SegundoTotem (char *buf, char *curp){
@@ -150,13 +143,11 @@ int SegundoTotem (char *buf, char *curp){
 		printf("La fecha debe tener el formato adecuado: AAAA-MM-dd, (ejemplo 1990-01-21)\n");
 		return 1;
 	}
-
 	if (anno == FALSE){
 	    printf ("\n**ADVERTENCIA**\n");
 		printf("El año debe estar formado de cuatro dígitos y mayor a cero\n");
 		return 1;
 	} 
-
 	if (mes == FALSE){
 	    printf ("\n**ADVERTENCIA**\n");
 		printf("El mes debe ser a dos dígitos y mayor a cero, con 01=Enero, 02=Febrero...\n");
@@ -166,7 +157,7 @@ int SegundoTotem (char *buf, char *curp){
 	    printf ("\n**ADVERTENCIA**\n");
         printf("El año solamente tiene 12 meses checa bien el mes que introduciste.\n");
 				return 1;
-    }
+         }
 	}
 
 	if (dia == FALSE){
@@ -175,11 +166,9 @@ int SegundoTotem (char *buf, char *curp){
 		return 1;
 	}
 
-
 	//Problema años biciesto
-	int es_biciesto = anno % 4 == 0  && (anno % 100 != 0  ||  anno % 400 == 0);
-
-	if ( !es_biciesto && mes == 2 && dia > 28 ){
+	int biciesto = anno % 4 == 0  && (anno % 100 != 0  ||  anno % 400 == 0);
+	if (!biciesto && mes == 2 && dia > 28 ){
 	    printf ("\n**ADVERTENCIA**\n");
 		printf("El año %d no es biciesto, sin embargo usted indicó una fecha de Febrero que lo requiere.\n", anno);
 		return 1;
@@ -187,7 +176,7 @@ int SegundoTotem (char *buf, char *curp){
 
 	if ( mes != 2 ) {
 
-		if ( mes % 2 == 0 && mes != 8){
+		if ( mes % 2 == 0 && mes != 8 || mes != 10 || mes != 12){
 			if ( dia > 30 ){
 			    printf ("\n**ADVERTENCIA**\n");
 				printf("El mes %02d solamente tiene 30 días.\n", mes);
@@ -232,7 +221,7 @@ if (strlen(buf) == 0){
 
 
 //--------------------Lugar de nacimiento---------------
-int CuartoTotem (int indice, char * curp) {
+int CuartoTotem (int indice, char *curp) {
 	const char estados[33][2];
      if (indice == 1){
 		curp[11] = 'A';
@@ -391,8 +380,8 @@ int main(int estado){
 	memset(fecha, 0, buffer_size);
 	memset(sexo, 0, short_buffer_size);
 
-	printf ("**BIENVENIDO A LA CALCULADORA DE CURP**\n");
-	printf ("Advertencia: Para el correcto funcionamiento, no debe ingresar acentos en ningún campo y siga todas las indicaciones dadas.\n");
+	printf ("      **BIENVENIDO A LA CALCULADORA DE CURP**\n");
+	printf ("Advertencia: \nPara el correcto funcionamiento, no debe ingresar acentos en ningún campo y siga todas las indicaciones dadas.\n");
 
       while(Primer_QuintoTotem (nombre, curp)){        // Pedimos el nombre.
         printf ("\n-----------------------------------------------\n");
