@@ -39,7 +39,7 @@ char primeraVocal (char *buf){
 
 char primeraConsonante (char *buf) {
 	while (*buf != '\0'){
-		switch ( toupper(*buf) ){
+		switch (toupper(*buf)){
 			case 'A':
 			case 'E':
 			case 'I':
@@ -62,6 +62,7 @@ int Primer_QuintoTotem (char *buf, char *curp){
 	if (strlen(buf) < 2){
 		return 1;
 	}
+
 	while (*(copia++) != '\0'){
 	    char caracter = toupper(*copia);
 		if ( !(caracter == ' ' || caracter == '\0' || isalpha (caracter))){ //Si el caracter no es un espacio, un salto de linea o una letra arrojar advertencia
@@ -70,6 +71,7 @@ int Primer_QuintoTotem (char *buf, char *curp){
 			return 1;
 		}
   	  }
+
 
 	// Apellido paterno.
 	if (token = strtok(buf, delimiter)){
@@ -333,13 +335,14 @@ return 0;
 //-----------------Homoclave-----------------------
 int SextoTotem (char *curp){
 	srand(time(NULL));
-	int anno;
+	char *anno_s;
 	char a, b; 
-	if (anno <= 1999){
-	     a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random () % 26];
+	if (*anno_s <= 1999){
+	    a = "0123456789"[random () % 10];
+	     
 	}
-	else  if (anno >= 2000){
-	     a = "0123456789"[random () % 10];
+	else  if (*anno_s >= 2000){
+	     a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random () % 26];
 	}
     
     b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"[random () % 36];
@@ -455,4 +458,3 @@ int main(int estado){
 
 	return 0;
 }
-
