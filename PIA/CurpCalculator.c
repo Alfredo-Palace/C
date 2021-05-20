@@ -139,7 +139,7 @@ int SegundoTotem (char *buf, char *curp){
 
 	if ( (!anno + !mes + !dia) > 2 ){
 	    printf ("\n**ADVERTENCIA**\n");
-		printf("La fecha debe tener el formato adecuado: AAAA-MM-dd, (ejemplo 1990-01-21)\n");
+		printf("La fecha debe tener el formato adecuado: AAAA-MM-dd, (ejemplo 2002-08-02 para el 2 de agosto del 2002)\n");
 		return 1;
 	}
 	if (anno == FALSE){
@@ -386,20 +386,20 @@ int main(int estado){
       while (Primer_QuintoTotem (nombre, curp)){        // Pedimos el nombre.
         printf ("\n-----------------------------------------------\n");
         printf ("Debe ingresar su nombre completo\n");
-	    printf ("Introduzca su nombre iniciando por apellido paterno (ejemplo \"Gomez Pérez Maria Antonieta\"):\n");
+	    printf ("Introduzca su nombre iniciando por apellido paterno (ejemplo \"Perez Gonzalez Juan Carlos\"):\n");
 		saca (string_buffer_len, nombre);
 	};
 
 	while (SegundoTotem (fecha, curp)){ 		// Pedimos la fecha.
 	  printf ("\n-----------------------------------------------\n");
 	  printf ("Debe ingresar una fecha\n");
-	  printf ("Introduzca su fecha de nacimiento YYYY-MM-dd (ejemplo \"1980-09-02\" para el 2 de septiembre de 1980):\n");
+	  printf ("Introduzca su fecha de nacimiento YYYY-MM-dd (ejemplo \"2010-11-21\" para el 21 de noviembre del 2010):\n");
 		saca (string_buffer_len, fecha);  
 	};
 
 	while (TercerTotem (sexo, curp)){	// Pedimos el sexo.
 	  	printf ("\n-----------------------------------------------\n");
-	  	printf ("Debe ingresar un sexo\n");
+	  	printf ("Debe ingresar su sexo\n");
 	  	printf ("Introduzca su sexo (M para mujer, H para hombre):\n");
 		saca (string_short_buffer_len, sexo);  
 	};
