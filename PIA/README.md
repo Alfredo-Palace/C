@@ -42,7 +42,7 @@ Memories and a robust interface were also added so that the program works in a g
 [Click here for the CURP Calculator](https://www.onlinegdb.com/edit/BkxgdsALud).
 ## Video 📼
 If you don't want to compile but you want to see that the code works, watch the following: 
-[CURP IN C PROGRAM](https://www.youtube.com/).  
+[CURP IN C PROGRAM](https://youtu.be/JvOut2LaQuw).  
 
 ## References 📚
 
