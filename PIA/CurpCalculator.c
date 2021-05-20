@@ -12,7 +12,6 @@ int saca (int max, char *buf){
 					&& !ferror(stdin)
 					);
 				buf[max-1] = '\0'; // En caso de no haber fin de linea, ponemos nulo al final.
-				// Advertimos al usuario.
 		    printf ("\n**ADVERTENCIA**\n");
 			printf("Entrada demasiado larga, acotado a \"%s\"", buf);
 		}
@@ -184,7 +183,7 @@ int SegundoTotem (char *buf, char *curp){
 			}
 
 		}else {
-			if ( dia > 31) {
+			if (dia > 31) {
 			    printf ("\n**ADVERTENCIA**\n");
 				printf("El mes %02d solamente tiene 31 días.\n", mes);
 				return 1;
@@ -383,21 +382,21 @@ int main(int estado){
 	printf ("      **BIENVENIDO A LA CALCULADORA DE CURP**\n");
 	printf ("Advertencia: \nPara el correcto funcionamiento, no debe ingresar acentos en ningún campo y siga todas las indicaciones dadas.\n");
 
-      while(Primer_QuintoTotem (nombre, curp)){        // Pedimos el nombre.
+      while (Primer_QuintoTotem (nombre, curp)){        // Pedimos el nombre.
         printf ("\n-----------------------------------------------\n");
         printf ("Debe ingresar su nombre completo\n");
 	    printf ("Introduzca su nombre iniciando por apellido paterno (ejemplo \"Gomez Pérez Maria Antonieta\"):\n");
 		saca (string_buffer_len, nombre);
 	};
 
-	while(SegundoTotem (fecha, curp)){ 		// Pedimos la fecha.
+	while (SegundoTotem (fecha, curp)){ 		// Pedimos la fecha.
 	  printf ("\n-----------------------------------------------\n");
 	  printf ("Debe ingresar una fecha\n");
 	  printf ("Introduzca su fecha de nacimiento YYYY-MM-dd (ejemplo \"1980-09-02\" para el 2 de septiembre de 1980):\n");
 		saca (string_buffer_len, fecha);  
 	};
 
-	while(TercerTotem (sexo, curp)){	// Pedimos el sexo.
+	while (TercerTotem (sexo, curp)){	// Pedimos el sexo.
 	  	printf ("\n-----------------------------------------------\n");
 	  	printf ("Debe ingresar un sexo\n");
 	  	printf ("Introduzca su sexo (M para mujer, H para hombre):\n");
@@ -444,7 +443,7 @@ int main(int estado){
         printf ("\n**ADVERTENCIA**-> Para el correcto funcionamiento del codigo unicamente introduce numeros\n");
 		printf ("Introduzca el número de estado donde ha nacido:\n");
 		scanf ("%d", &estado);
-	}while(CuartoTotem (estado, curp));
+	} while (CuartoTotem (estado, curp));
 
 	SextoTotem (curp); //Damos la homoclave
 	printf ("\n-----------------------------------------------\n");
